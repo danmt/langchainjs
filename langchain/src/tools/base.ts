@@ -82,6 +82,7 @@ export abstract class StructuredTool<
   ): Promise<string> {
     let parsed;
     try {
+      console.log('I EENTER HERE')
       parsed = await this.schema.parseAsync(arg);
     } catch (e) {
       throw new ToolInputParsingException(
